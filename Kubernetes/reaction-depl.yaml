@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reaction-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactionservice
+  template:
+    metadata:
+      labels:
+        app: reactionservice
+    spec:
+      containers:
+      - name: reactionservice
+        image: <Image>
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
+        # ports:
+        # - containerPort: <Port>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactionsServiceApi", "ReactionsServiceApi\ReactionsServiceApi.csproj", "{9BF91066-FFA4-4CA4-8B8E-3FA660325816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactionsServiceApi", "ReactionsServiceApi\ReactionsServiceApi.csproj", "{9BF91066-FFA4-4CA4-8B8E-3FA660325816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsequenceServiceApi", "ConsequenceServiceApi\ConsequenceServiceApi.csproj", "{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsequenceServiceApi", "ConsequenceServiceApi\ConsequenceServiceApi.csproj", "{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
