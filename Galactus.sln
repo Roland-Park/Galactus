@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactionsServiceApi", "ReactionsServiceApi\ReactionsServiceApi.csproj", "{9BF91066-FFA4-4CA4-8B8E-3FA660325816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsequenceServiceApi", "ConsequenceServiceApi\ConsequenceServiceApi.csproj", "{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BF91066-FFA4-4CA4-8B8E-3FA660325816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF91066-FFA4-4CA4-8B8E-3FA660325816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF91066-FFA4-4CA4-8B8E-3FA660325816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF91066-FFA4-4CA4-8B8E-3FA660325816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {406E7676-F32A-457B-8BC3-ACFC738753C3}
+	EndGlobalSection
+EndGlobal
