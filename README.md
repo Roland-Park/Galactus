@@ -13,7 +13,8 @@ angular
 
 To run:
 This assumes you have k8s enabled in docker desktop, or something similar to run a k8s node.
-1. build the docker images for the two apis. From the Galactus directory, run: 
+
+1. build the docker images for the three apis. From the Galactus directory, run: 
 - `docker build -t <your repo name>/consequenceservice -f ConsequenceServiceApi/Dockerfile .` 
 - `docker build -t <your repo name>/reactionservice -f ReactionsServiceApi/Dockerfile .`
 - `docker build -t <your repo name>/moodservice -f MoodServiceApi/Dockerfile .`
@@ -23,10 +24,12 @@ This assumes you have k8s enabled in docker desktop, or something similar to run
 - `docker push <your repo name>/consequenceservice`
 - `docker push <your repo name>/moodservice`
 
-3. Deploy to k8s. Update the images section of the api depl.yaml files with the name of the image you pushed to dockerhub in step 2. From within the Kubernetes directory, run: 
+3. Deploy to k8s. Update the api depl.yaml 'images' section with the names of the image you pushed to dockerhub in step 2. Then from within the Kubernetes directory, run: 
 - `kubectl apply -f consequence-depl.yaml` create consequence service
 - `kubectl apply -f reaction-depl.yaml` create reaction service
 - `kubectl apply -f mood-depl.yaml` create mood service
 - `kubectl apply -f platforms-nodeport-service.yaml` maps the reaction service to a port (just to verify k8s works), eg http://localhost:31590/reaction. You can get the port by running `kubectl get services`
+
+4. UI is not containerized yet, but you can run it using `npm start` from within the GalactusUI directory. Endpoints can be changed in the src/config.ts file
 
 
