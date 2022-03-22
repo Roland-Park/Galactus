@@ -10,6 +10,15 @@ using ReactionsServiceApi.Infrastructure.Repositories.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var policy = "cors";
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(policy,
+        builder => builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
+
 string dbName = "InMemoryReactionDb";
 builder.Services.AddDbContext<ReactionsDbContext>(o =>
     o.UseInMemoryDatabase(dbName));
@@ -24,6 +33,8 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 DbConfig.SeedDb(app);
+
+app.UseCors(policy);
 
 app.UseAuthorization();
 

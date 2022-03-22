@@ -1,0 +1,6 @@
+<div>
+    {{(reaction$ | async)?.body}}
+</div>
+<div>
+    <button (click)="getReaction()">Hit the api!</button>
+</div>
