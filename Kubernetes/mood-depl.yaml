@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: consequence-depl
+  name: mood-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: consequenceservice
+      app: moodservice
   template:
     metadata:
       labels:
-        app: consequenceservice
+        app: moodservice
     spec:
       containers:
-      - name: consequenceservice
-        image: rolandpark/consequenceservice:latest
+      - name: moodservice
+        image: rolandpark/moodservice:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: consequence-clusterip-srv
+  name: mood-clusterip-srv
 spec:
   type: ClusterIP
   selector:
-    app: consequenceservice
+    app: moodservice
   ports:
   - port: 80
     targetPort: 80

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactionsServiceApi", "Reac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsequenceServiceApi", "ConsequenceServiceApi\ConsequenceServiceApi.csproj", "{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodServiceApi", "MoodServiceApi\MoodServiceApi.csproj", "{37DF35A5-1CEA-4746-AE3C-5368C0AC1DE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75DD5BE1-B949-49B1-A68B-964CCAEA78D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DF35A5-1CEA-4746-AE3C-5368C0AC1DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DF35A5-1CEA-4746-AE3C-5368C0AC1DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DF35A5-1CEA-4746-AE3C-5368C0AC1DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DF35A5-1CEA-4746-AE3C-5368C0AC1DE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,11 +13,11 @@ public class ConsequenceRepository : RepositoryBase, IConsequenceRepository
         this.context = context;
     }
 
-    public async Task<Consequence> GetConsequenceForMood(Mood mood)
+    public async Task<Consequence> GetConsequenceForMood(int moodId)
     {
         var r = new Random();
 
-        var consequences = await context.Consequences.Where(x => x.Mood == mood).ToListAsync();
+        var consequences = await context.Consequences.Where(x => x.MoodId == moodId).ToListAsync();
         if (!consequences.Any())
         {
             return null;

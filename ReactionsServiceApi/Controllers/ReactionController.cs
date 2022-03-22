@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ReactionsServiceApi.Infrastructure.Factories.Interfaces;
 using ReactionsServiceApi.Infrastructure.Repositories.Interfaces;
+using ReactionsServiceApi.Infrastructure.Services.Interfaces;
 using ReactionsServiceApi.Models;
 
 namespace ReactionsServiceApi.Controllers;
@@ -10,16 +11,19 @@ public class ReactionController : ControllerBase
 {
     private readonly IReactionFactory reactionFactory;
     private readonly IReactionRepository reactionRepository;
-    public ReactionController(IReactionFactory reactionFactory, IReactionRepository reactionRepository)
+    private readonly IServicesHttpClient httpClient;
+    public ReactionController(IReactionFactory reactionFactory, IReactionRepository reactionRepository, IServicesHttpClient httpClient)
     {
         this.reactionFactory = reactionFactory;
         this.reactionRepository = reactionRepository;
+        this.httpClient = httpClient;
     }
 
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(DisplayReactionModel))]
     public async Task<ActionResult<string>> GetRandom()
     {
+        await httpClient.GetMoods();
         var reaction = await reactionRepository.GetRandomReaction();
         var model = reactionFactory.Build(reaction);
         return Ok(model);

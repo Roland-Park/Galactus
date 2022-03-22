@@ -1,4 +1,4 @@
-﻿namespace ConsequenceServiceApi.Entities;
+﻿namespace MoodServiceApi.Entities;
 
 public class Mood
 {

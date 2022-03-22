@@ -20,7 +20,7 @@ public class ConsequenceController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(DisplayConsequenceModel))]
     public async Task<ActionResult<DisplayConsequenceModel>> GetForMoodId(int id)
     {
-        var consequence = await consequenceRepository.GetConsequenceForMood((Mood)id);
+        var consequence = await consequenceRepository.GetConsequenceForMood(id);
         var model = consequenceFactory.Build(consequence);
         return Ok(model);
     }

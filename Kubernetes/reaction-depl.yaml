@@ -21,3 +21,15 @@ spec:
         #     cpu: "500m"
         # ports:
         # - containerPort: <Port>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reaction-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: reactionservice
+  ports:
+  - port: 80
+    targetPort: 80

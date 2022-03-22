@@ -6,6 +6,8 @@ using ReactionsServiceApi.Infrastructure.Factories;
 using ReactionsServiceApi.Infrastructure.Factories.Interfaces;
 using ReactionsServiceApi.Infrastructure.Repositories;
 using ReactionsServiceApi.Infrastructure.Repositories.Interfaces;
+using ReactionsServiceApi.Infrastructure.Services;
+using ReactionsServiceApi.Infrastructure.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,7 @@ builder.Services.AddDbContext<ReactionsDbContext>(o =>
 
 builder.Services.AddScoped<IReactionRepository, ReactionRepository>();
 builder.Services.AddScoped<IReactionFactory, ReactionFactory>();
+builder.Services.AddHttpClient<IServicesHttpClient, ServicesHttpClient>();
 
 builder.Services.AddAutoMapper((typeof(ReactionsApiMapper).Assembly));
 

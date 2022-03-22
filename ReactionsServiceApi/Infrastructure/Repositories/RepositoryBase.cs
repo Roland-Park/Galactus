@@ -1,8 +1,9 @@
 ﻿using ReactionsServiceApi.Infrastructure.Data;
+using ReactionsServiceApi.Infrastructure.Repositories.Interfaces;
 
 namespace ReactionsServiceApi.Infrastructure.Repositories;
 
-public abstract class RepositoryBase
+public abstract class RepositoryBase : IRepositoryBase
 {
     private readonly ReactionsDbContext context;
     public RepositoryBase(ReactionsDbContext context)

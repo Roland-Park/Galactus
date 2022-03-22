@@ -4,5 +4,5 @@ namespace ConsequenceServiceApi.Infrastructure.Repositories.Interfaces;
 
 public interface IConsequenceRepository : IRepositoryBase
 {
-    Task<Consequence> GetConsequenceForMood(Mood mood);
+    Task<Consequence> GetConsequenceForMood(int moodId);
 }
