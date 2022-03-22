@@ -26,12 +26,12 @@ public class ServicesHttpClient : IServicesHttpClient //This could be broken int
             }
             else
             {
-                Console.WriteLine("bad things have happened");
+                Console.WriteLine("response status does not indicate success.");
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+            Console.WriteLine($"Error with httpClient: {ex.Message}");
         }
         
     }
