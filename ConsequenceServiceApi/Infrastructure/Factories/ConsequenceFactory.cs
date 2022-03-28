@@ -18,4 +18,10 @@ public class ConsequenceFactory : IConsequenceFactory
         var model = mapper.Map<DisplayConsequenceModel>(consequence);
         return model;
     }
+
+    public List<DisplayConsequenceModel> Build(List<Consequence> consequences)
+    {
+        var model = mapper.Map<List<DisplayConsequenceModel>>(consequences);
+        return model;
+    }
 }

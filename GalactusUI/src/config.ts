@@ -1,5 +1,5 @@
 export class Config{
-    consequenceEndpointBaseUrl: string = "http://localhost:49157/consequence/";
-    moodEndpointBaseUrl: string = "http://localhost:49157/mood";
-    reactionEndpointBaseUrl: string = "http://localhost:49158/reaction";
+    consequenceEndpointBaseUrl: string = "http://consequence-clusterip-srv:80/consequence";
+    moodEndpointBaseUrl: string = "http://mood-clusterip-srv:80/mood";
+    reactionEndpointBaseUrl: string = "http://reaction-clusterip-srv:80/reaction";
 }

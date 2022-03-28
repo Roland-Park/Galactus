@@ -13,6 +13,17 @@ public class ConsequenceRepository : RepositoryBase, IConsequenceRepository
         this.context = context;
     }
 
+    public async Task<List<Consequence>> GetAllConsequences()
+    {
+        var consequences = await context.Consequences.ToListAsync();
+        if (!consequences.Any())
+        {
+            return null;
+        }
+
+        return consequences;
+    }
+
     public async Task<Consequence> GetConsequenceForMood(int moodId)
     {
         var r = new Random();

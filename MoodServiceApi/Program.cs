@@ -13,6 +13,15 @@ string dbName = "InMemoryMoodDb";
 builder.Services.AddDbContext<MoodDbContext>(o =>
     o.UseInMemoryDatabase(dbName));
 
+var policy = "moodServiceCorsPolicy";
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(policy,
+        builder => builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
+
 builder.Services.AddScoped<IMoodRepository, MoodRepository>();
 builder.Services.AddScoped<IMoodFactory, MoodFactory>();
 
@@ -23,6 +32,8 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 DbConfig.SeedDb(app);
+
+app.UseCors(policy);
 
 app.UseAuthorization();
 

@@ -30,4 +30,6 @@ spec:
     app: reactionservice
   ports:
   - port: 80
+    name: reactionservice
+    protocol: TCP
     targetPort: 80

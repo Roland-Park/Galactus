@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blazor-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blazorui
+  template:
+    metadata:
+      labels:
+        app: blazorui
+    spec:
+      containers:
+      - name: blazorui
+        image: rolandpark/galactusblazorui:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

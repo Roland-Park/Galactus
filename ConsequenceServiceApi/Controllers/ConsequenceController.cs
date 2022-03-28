@@ -1,5 +1,4 @@
-﻿using ConsequenceServiceApi.Entities;
-using ConsequenceServiceApi.Infrastructure.Factories.Interfaces;
+﻿using ConsequenceServiceApi.Infrastructure.Factories.Interfaces;
 using ConsequenceServiceApi.Infrastructure.Repositories.Interfaces;
 using ConsequenceServiceApi.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +14,14 @@ public class ConsequenceController : ControllerBase
     {
         this.consequenceFactory = consequenceFactory;
         this.consequenceRepository = consequenceRepository;
+    }
+    [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<DisplayConsequenceModel>))]
+    public async Task<ActionResult<DisplayConsequenceModel>> GetAll()
+    {
+        var consequences = await consequenceRepository.GetAllConsequences();
+        var model = consequenceFactory.Build(consequences);
+        return Ok(model);
     }
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(DisplayConsequenceModel))]

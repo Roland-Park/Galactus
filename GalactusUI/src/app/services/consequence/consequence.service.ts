@@ -18,7 +18,7 @@ export class ConsequenceService {
    }
 
    getConsequence(reactionBotMood: number){
-    return this.http.get<IConsequence>(this.endpointBaseUrl + reactionBotMood, {
+    return this.http.get<IConsequence>(this.endpointBaseUrl + "/" + reactionBotMood, {
       headers: new HttpHeaders({
       "Content-Type": "Application/json"
       })

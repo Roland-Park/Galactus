@@ -19,3 +19,17 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: galactusui
+  ports:
+  - port: 80
+    name: galactusui
+    protocol: TCP
+    targetPort: 80

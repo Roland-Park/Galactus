@@ -30,4 +30,6 @@ spec:
     app: consequenceservice
   ports:
   - port: 80
+    name: consequenceservice
+    protocol: TCP
     targetPort: 80

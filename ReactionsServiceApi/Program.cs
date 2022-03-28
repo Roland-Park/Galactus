@@ -12,7 +12,7 @@ using ReactionsServiceApi.Infrastructure.Services.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var policy = "cors";
+var policy = "reactionServiceCorsPolicy";
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy(policy,
@@ -35,6 +35,7 @@ builder.Services.AddAutoMapper((typeof(ReactionsApiMapper).Assembly));
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
 DbConfig.SeedDb(app);
 
 app.UseCors(policy);

@@ -30,4 +30,6 @@ spec:
     app: moodservice
   ports:
   - port: 80
+    name: moodservice
+    protocol: TCP
     targetPort: 80
