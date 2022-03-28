@@ -14,7 +14,7 @@ angular
 To run:
 This assumes you have k8s enabled in docker desktop, or something similar to run a k8s node.
 
-1. build the docker images for the three apis (Replace my name with your docker repo name, or dont).
+1. build the docker images (Replace my name with your docker repo name, or dont).
 - From the Galactus directory, run: 
   - `docker build -t rolandpark/consequenceservice -f ConsequenceServiceApi/Dockerfile .` 
   - `docker build -t rolandpark/reactionservice -f ReactionsServiceApi/Dockerfile .`
