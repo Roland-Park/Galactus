@@ -14,15 +14,19 @@ angular
 To run:
 This assumes you have k8s enabled in docker desktop, or something similar to run a k8s node.
 
-1. build the docker images for the three apis. From the Galactus directory, run: 
-- `docker build -t <your repo name>/consequenceservice -f ConsequenceServiceApi/Dockerfile .` 
-- `docker build -t <your repo name>/reactionservice -f ReactionsServiceApi/Dockerfile .`
-- `docker build -t <your repo name>/moodservice -f MoodServiceApi/Dockerfile .`
+1. build the docker images for the three apis (Replace my name with your docker repo name, or dont).
+- From the Galactus directory, run: 
+  - `docker build -t rolandpark/consequenceservice -f ConsequenceServiceApi/Dockerfile .` 
+  - `docker build -t rolandpark/reactionservice -f ReactionsServiceApi/Dockerfile .`
+  - `docker build -t rolandpark/moodservice -f MoodServiceApi/Dockerfile .`
+- From the GalactusUI directory, run:
+  - `docker build -t rolandpark/galactusui .`
 
-2. push the images to a docker repository.
-- `docker push <your repo name>/reactionservice`
-- `docker push <your repo name>/consequenceservice`
-- `docker push <your repo name>/moodservice`
+2. push the images to your docker repository.
+- `docker push rolandpark/reactionservice`
+- `docker push rolandpark/consequenceservice`
+- `docker push rolandpark/moodservice`
+- `docker push rolandpark/galactusui`
 
 3. Deploy to k8s. Update the api depl.yaml 'images' section with the names of the image you pushed to dockerhub in step 2. Then from within the Kubernetes directory, run: 
 - `kubectl apply -f consequence-depl.yaml` create consequence service
