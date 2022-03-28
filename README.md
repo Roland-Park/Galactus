@@ -28,8 +28,8 @@ This assumes you have k8s enabled in docker desktop, or something similar to run
 - `kubectl apply -f consequence-depl.yaml` create consequence service
 - `kubectl apply -f reaction-depl.yaml` create reaction service
 - `kubectl apply -f mood-depl.yaml` create mood service
-- `kubectl apply -f platforms-nodeport-service.yaml` maps the reaction service to a port (just to verify k8s works), eg http://localhost:31590/reaction. You can get the port by running `kubectl get services`
+- `kubectl apply -f ui-depl.yaml` create ui
+- `kubectl apply -f platforms-nodeport-service.yaml` maps the ui to a port. You can get the port by running `kubectl get services`
 
-4. UI is not containerized yet, but you can run it using `npm start` from within the GalactusUI directory. Endpoints can be changed in the src/config.ts file
 
 

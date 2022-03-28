@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: galactusui
+  template:
+    metadata:
+      labels:
+        app: galactusui
+    spec:
+      containers:
+      - name: galactusui
+        image: rolandpark/galactusui:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
