@@ -1,4 +1,4 @@
-﻿namespace ReactionsServiceApi.Models;
+﻿namespace ReactionsServiceApi.Models.Reactions;
 
 public class DisplayReactionModel
 {

@@ -11,8 +11,8 @@
   "profiles": {
     "MoodServiceApi": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "",
+      "launchBrowser": false,
+      "launchUrl": "mood",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -21,15 +21,15 @@
     },
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "",
+      "launchBrowser": false,
+      "launchUrl": "mood",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "Docker": {
       "commandName": "Docker",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "publishAllPorts": true
     }

@@ -1,4 +1,4 @@
-﻿namespace ConsequenceServiceApi.Models;
+﻿namespace ConsequenceServiceApi.Models.Consequences;
 
 public class DisplayConsequenceModel
 {

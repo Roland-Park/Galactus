@@ -1,6 +1,6 @@
 ﻿using ConsequenceServiceApi.Infrastructure.Factories.Interfaces;
 using ConsequenceServiceApi.Infrastructure.Repositories.Interfaces;
-using ConsequenceServiceApi.Models;
+using ConsequenceServiceApi.Models.Consequences;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConsequenceServiceApi.Controllers;

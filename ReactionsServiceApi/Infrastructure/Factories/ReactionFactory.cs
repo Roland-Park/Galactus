@@ -2,6 +2,7 @@
 using ReactionsServiceApi.Entities;
 using ReactionsServiceApi.Infrastructure.Factories.Interfaces;
 using ReactionsServiceApi.Models;
+using ReactionsServiceApi.Models.Reactions;
 
 namespace ReactionsServiceApi.Infrastructure.Factories;
 

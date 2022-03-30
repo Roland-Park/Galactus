@@ -1,5 +1,5 @@
 ﻿using ConsequenceServiceApi.Entities;
-using ConsequenceServiceApi.Models;
+using ConsequenceServiceApi.Models.Consequences;
 
 namespace ConsequenceServiceApi.Infrastructure.Factories.Interfaces;
 

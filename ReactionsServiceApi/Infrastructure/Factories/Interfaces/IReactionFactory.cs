@@ -1,5 +1,5 @@
 ﻿using ReactionsServiceApi.Entities;
-using ReactionsServiceApi.Models;
+using ReactionsServiceApi.Models.Reactions;
 
 namespace ReactionsServiceApi.Infrastructure.Factories.Interfaces;
 

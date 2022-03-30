@@ -11,8 +11,8 @@
   "profiles": {
     "ReactionsServiceApi": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "api/reaction",
+      "launchBrowser": false,
+      "launchUrl": "reaction",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -21,15 +21,15 @@
     },
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "",
+      "launchBrowser": false,
+      "launchUrl": "reaction",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "Docker": {
       "commandName": "Docker",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "publishAllPorts": true
     }

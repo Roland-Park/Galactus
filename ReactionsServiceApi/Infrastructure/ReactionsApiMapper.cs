@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ReactionsServiceApi.Entities;
-using ReactionsServiceApi.Models;
+using ReactionsServiceApi.Models.Moods;
+using ReactionsServiceApi.Models.Reactions;
 
 namespace ReactionsServiceApi.Infrastructure;
 
@@ -10,5 +11,7 @@ public class ReactionsApiMapper : Profile
     {
         CreateMap<CreateReactionModel, Reaction>();
         CreateMap<Reaction, DisplayReactionModel>();
+
+        CreateMap<Mood, PublishReactionbotMoodModel>();
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ConsequenceServiceApi.Entities;
 using ConsequenceServiceApi.Infrastructure.Factories.Interfaces;
-using ConsequenceServiceApi.Models;
+using ConsequenceServiceApi.Models.Consequences;
 
 namespace ConsequenceServiceApi.Infrastructure.Factories;
 
