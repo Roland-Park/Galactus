@@ -14,9 +14,9 @@ public class RabbitMqMessageBus : IMessageBus
     private IModel channel;
     private readonly RabbitMQConfig config;
 
-    public RabbitMqMessageBus(IOptions<RabbitMQConfig> configFileSettings)
+    public RabbitMqMessageBus(IOptions<RabbitMQConfig> opt)
     {
-        config = configFileSettings.Value;
+        config = opt.Value;
 
         var factory = new ConnectionFactory()
         {

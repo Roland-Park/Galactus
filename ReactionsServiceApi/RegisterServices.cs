@@ -22,7 +22,7 @@ public static class RegisterServices
         ConfigureCors(builder, corsPolicyName);
         ConfigureDatabaseContext(builder, dbName);
         ConfigureDependencyInjection(builder);
-        ConfigureAppSettings(builder);
+        ConfigureAppSettingsConfigs(builder);
 
         builder.Services.AddAutoMapper((typeof(ReactionsApiMapper).Assembly));
         builder.Services.AddControllers();
@@ -56,7 +56,7 @@ public static class RegisterServices
         builder.Services.AddSingleton<IMessageBus, RabbitMqMessageBus>();
     }
 
-    private static void ConfigureAppSettings(WebApplicationBuilder builder)
+    private static void ConfigureAppSettingsConfigs(WebApplicationBuilder builder)
     {
         builder.Services.Configure<RabbitMQConfig>(builder.Configuration.GetSection("RabbitMQConfig"));
     }

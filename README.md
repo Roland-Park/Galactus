@@ -42,6 +42,7 @@ This assumes you have k8s enabled in docker desktop, or something similar to run
 
 TODO
 - figure out why I get a cors error when running the angular ui in the cluster
+- figure out why appsettings arent picked up properly in consequenceService
 - get istio working with an api gateway (may fix cors error?)
 - explore istio features
 - profit
