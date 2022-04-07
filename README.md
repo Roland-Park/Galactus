@@ -7,12 +7,13 @@ List of Microservices:
 - MoodService: Defines and provides the moods the bots can be in. 
 - UI: The UI
 
-### Stack
+Stack:
 dotnet6/EF
 angular
 
-To run:
-This assumes you have k8s enabled in docker desktop, or something similar to run a k8s node.
+Notes:
+- This assumes you have k8s enabled in docker desktop, or something similar, to run a k8s cluster.
+- `KubernetesWithoutIstio` branch: shockingly, this contains just the app in kubernetes without istio
 
 ## Step 1
 Build the docker images (Replace my name with your docker repo name, or dont).
