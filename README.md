@@ -7,8 +7,8 @@ List of Microservices:
 - MoodService: Defines and provides the moods the bots can be in. 
 - UI: The UI
 
-Stack
-.net6/EF
+### Stack
+dotnet6/EF
 angular
 
 To run:
