@@ -38,7 +38,7 @@ This assumes you have k8s enabled in docker desktop, or something similar to run
 - I used https://istio.io/latest/docs/setup/getting-started/ as reference. More details can be found there
 
 
-4. Deploy to k8s. update the api depl.yaml 'images' section with the names of the image you pushed to dockerhub in step 2. Then from within the Galactus directory, run: 
+4. Deploy to k8s. Update the api depl.yaml 'images' section with the names of the image you pushed to dockerhub in step 2. Then from within the Galactus directory, run: 
 - `kubectl apply -f kubernetes` runs all deployments in the Galactus/Kubernetes directory
 - running `kubectl get pods` should show 2 containers per pod.
 
@@ -54,7 +54,7 @@ This assumes you have k8s enabled in docker desktop, or something similar to run
 TODO
 - figure out why I get a cors error when running the angular ui in the cluster
 - figure out why appsettings arent picked up properly in consequenceService
-- get istio working with an api gateway (may fix cors error?)
+- get figure out istio gateway setup and get it working (may fix angular cors error?)
 - explore istio features
 - profit
 - retire
