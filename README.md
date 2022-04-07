@@ -14,7 +14,7 @@ angular
 To run:
 This assumes you have k8s enabled in docker desktop, or something similar to run a k8s node.
 
-##Step 1
+## Step 1
 Build the docker images (Replace my name with your docker repo name, or dont).
 - From the Galactus directory, run: 
   - `docker build -t rolandpark/consequenceservice -f ConsequenceServiceApi/Dockerfile .` 
