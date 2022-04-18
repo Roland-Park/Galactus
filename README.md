@@ -25,7 +25,7 @@ Build the docker images (Replace my name with your docker repo name, or dont).
   - `docker build -t rolandpark/galactusui .` (optional, since for now I'm running the ui locally)
 
 ## Step 2
-Push the images to your docker repository:
+Push the images to your docker repository (use `docker login` to authenticate):
 - `docker push rolandpark/reactionservice`
 - `docker push rolandpark/consequenceservice`
 - `docker push rolandpark/moodservice`
@@ -34,7 +34,7 @@ Push the images to your docker repository:
 ## Step 3
 Set up Istio control plane
 - add Galactus/Istio/istio-1.13.2/bin to your system environment variable. This will enable the istioctl command line functions.
-- run `istioctl install --set profile=demo -y`
+- From istio-1.13.2 directory, run `istioctl install --set profile=demo -y`
 - run `kubectl label namespace default istio-injection=enabled` to add the "istio-injection=enabled" label to the default namespace. Now, any deployment added to this namespace will get an istio sidecar.
 - I used https://istio.io/latest/docs/setup/getting-started/ as reference. More details can be found there
 
@@ -56,8 +56,10 @@ Deploy to k8s. Update the api depl.yaml 'images' section with the names of the i
 ## Step 6
 Testing
 - localhost:15672 is the queue ui
+- run `istioctl dashboard grafana` to start the kiali dashboard. http://localhost:3000/d/G8wLrJIZk/istio-mesh-dashboard
 - run `istioctl dashboard kiali` to start the kiali dashboard
 - run `kubectl get services` to get the nodeport port. localhost:<port>/reaction will hit the reaction service, which loads moods from moodservice via http and then writes the reactionbot's mood to the queue.
+- run `kubectl logs -f consequence-depl-7dc784894b-gfp9c` to view logs for the consequence pod as it subscribes to the message queue
 
 ## TODO
 - figure out why I get a cors error when running the angular ui in the cluster
